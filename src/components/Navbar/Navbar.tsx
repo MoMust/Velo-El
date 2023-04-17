@@ -6,7 +6,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 const Navbar = () => {
 
   return (
-    <div className="navbar">
+    <div className="nav-bar sticky-top">
       <div className="wrapper">
         <div className="left">
           <div className="item">
@@ -34,7 +34,7 @@ const Navbar = () => {
           <Link className="link" to="/">
             <img
               className="main-icon"
-              src="assets/icons/Velo-icon-noBg.png"
+              src="assets/icons/velo-electric2.svg"
               alt=""
             ></img>
           </Link>

@@ -1,6 +1,8 @@
-.navbar{
-    position: relative;
+.nav-bar{
+    
     height: 120px;
+    backdrop-filter: blur(7px);
+     background-color: #111111;
 }
 
 .wrapper{

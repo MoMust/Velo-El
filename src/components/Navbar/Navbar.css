@@ -1,0 +1,59 @@
+.nav-bar {
+  height: 120px;
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  background-color: #111111;
+}
+
+.wrapper {
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper .item {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.wrapper .left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.wrapper .center {
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+.wrapper .center .main-icon {
+  width: 300px;
+}
+.wrapper .right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.wrapper .right .icons {
+  display: flex;
+  gap: 15px;
+  color: #777;
+  cursor: pointer;
+}
+.wrapper .right .cartIcon {
+  position: relative;
+  width: 32px;
+}
+.wrapper .right .cartIcon span {
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #2879fe;
+  color: white;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=Navbar.css.map */

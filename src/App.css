@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+.app {
+  font-family: "Prompt", sans-serif;
+}
+.app .header-wrapper {
+  background-color: #111111;
+}
+.app .header {
+  height: 400px;
+  padding-top: 80px;
+  padding-left: 30px;
+}
+.app .header .left .header-text-1 {
+  font-weight: 600;
+  font-size: 70px;
+  color: white;
+}
+.app .header .left h2 {
+  color: white;
+}
+.app .header .left p {
+  color: white;
+}
+.app .header .right {
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+.app .header .right .header-brand {
+  font-size: 100px;
+  letter-spacing: 10px;
+  font-weight: 1000;
+  color: rgba(10, 10, 10, 0.5254901961);
+}
+.app .link {
+  color: #d5ccc0;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.app .link:hover {
+  color: white;
+  transition: 0.5s;
+}/*# sourceMappingURL=App.css.map */
