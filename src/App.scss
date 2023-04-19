@@ -3,45 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
 
 .app {
-  .header-wrapper{
-    background-color: #111111;
-    
-  }
-  font-family: 'Prompt', sans-serif;
-  .header {
-    height: 400px;
-    // height: 100%;
-      padding-top: 80px;
-      padding-left: 30px;
-        
-      .left {
-    
-        .header-text-1 {
-          font-weight: 600;
-          font-size: 70px;
-          color: white;
-        }
-        h2 {
-          color: white;
-        }
-        p {
-          color: white;
-        }
-      }
-
-      .right {
-        margin-top: 50px;
-        margin-bottom: 0px;
-
-        .header-brand {
-          font-size: 100px;
-          letter-spacing: 10px;
-          font-weight: 1000;
-          color: #0a0a0a86;
-        }
-      }
-    
-  }
+  
+  *{
+ font-family: 'Prompt', sans-serif;
+ //  outline: 1px solid red;
+}
+   
   .link {
     color: #d5ccc0;
     text-decoration: none;
