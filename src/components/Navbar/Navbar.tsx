@@ -3,6 +3,7 @@ import './Navbar.scss'
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
+
 const Navbar = () => {
 
   return (
