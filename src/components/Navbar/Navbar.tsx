@@ -3,6 +3,7 @@ import './Navbar.scss'
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
+
 const Navbar = () => {
 
   return (
@@ -34,7 +35,7 @@ const Navbar = () => {
           <Link className="link" to="/">
             <img
               className="main-icon"
-              src="assets/icons/velo-electric2.svg"
+              src="assets/icons/velo-removebg-white.svg"
               alt=""
             ></img>
           </Link>

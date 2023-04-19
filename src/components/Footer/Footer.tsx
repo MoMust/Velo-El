@@ -9,12 +9,13 @@ import ContactSupportIcon from "@mui/icons-material/ContactSupport";
 
 const Footer = () => {
   return (
-    <div className="row footer justify-content-center">
+    <div className="row m-0 footer justify-content-center">
       <div className="left col-4 d-flex justify-content-center">
         <div className="item">
           <img
             className="footer-icon-1"
             src="assets/icons/Velo-icon-noBg.png"
+            alt=''
           ></img>
           <p>© VeloElectric 2023. All Rights Reserved.</p>
           <div className="icons-social d-flex justify-content-center">

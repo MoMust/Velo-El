@@ -7,8 +7,9 @@
 .home .videoTag {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100vw;
+  width: 100%;
   height: 690px;
   top: 0;
   left: 0;
+  color: rgb(39, 39, 175);
 }/*# sourceMappingURL=Home.css.map */

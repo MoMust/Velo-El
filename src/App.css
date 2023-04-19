@@ -6,9 +6,13 @@
   background-color: #111111;
 }
 .app .header {
-  height: 400px;
+  height: 350px;
+  width: 100%;
   padding-top: 80px;
   padding-left: 30px;
+}
+.app .header .left {
+  padding: 0;
 }
 .app .header .left .header-text-1 {
   font-weight: 600;
@@ -24,12 +28,22 @@
 .app .header .right {
   margin-top: 50px;
   margin-bottom: 0px;
+  padding: 0px;
 }
 .app .header .right .header-brand {
   font-size: 100px;
   letter-spacing: 10px;
   font-weight: 1000;
-  color: rgba(10, 10, 10, 0.5254901961);
+  color: white;
+}
+.app .header .right .header-brand .hover {
+  display: none;
+}
+.app .header .right .header-brand:hover {
+  color: #d5ccc0;
+}
+.app .header .right .header-brand:hover .hover {
+  display: contents;
 }
 .app .link {
   color: #d5ccc0;

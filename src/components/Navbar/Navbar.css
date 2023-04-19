@@ -27,6 +27,7 @@
 }
 .wrapper .center .main-icon {
   width: 300px;
+  height: 100px;
 }
 .wrapper .right {
   display: flex;
