@@ -1,5 +1,6 @@
 .styled-card {
   flex-basis: 25%;
+  
 
   .card-body{
 
@@ -12,3 +13,8 @@
 
     }
 }
+
+.styled-card:hover{
+    border: 1px solid rgb(218, 218, 218);
+  }
+

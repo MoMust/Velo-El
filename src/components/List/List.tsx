@@ -1,19 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import "./List.scss";
 import Card from "../Card/Card.tsx";
-
+import { Product } from '../../pages/Home/Home'
 
 
 const List = ({ productList, filterValue }) => {
 
-
-  // console.log(filterValue);
-
-  let filterdProductList = productList.filter((product) => {
+  let filterdProductList = productList.filter((product: Product) => {
     if (filterValue === "Elsparkcyklar") {
-      return product.category === "2";
+      return product.category === 2;
     } else if (filterValue === "Ebikes/Elmopeder") {
-      return product.category === "1";
+      return product.category === 1;
     } else {
       return product;
     }
@@ -21,7 +18,7 @@ const List = ({ productList, filterValue }) => {
 
   return (
     <div className="bottom row d-flex justify-content-center">
-      {filterdProductList.map((item) => {
+      {filterdProductList.map((item: any) => {
   
         return <Card product={item} key={item.id} />;
       })}
