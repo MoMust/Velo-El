@@ -2,10 +2,11 @@ import React from 'react'
 import './Card.scss';
 import { Link } from "react-router-dom";
 
+
 const Card = ({product}) => {
   
   return (
-    <div className="styled-card">
+    <div className="card styled-card">
       <Link to={`/product/${product.id}`}>
         <img
           className="card-img-top"

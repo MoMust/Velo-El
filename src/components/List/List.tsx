@@ -1,3 +1,4 @@
+
 import React from "react";
 import "./List.scss";
 import Card from "../Card/Card.tsx";
@@ -11,6 +12,7 @@ const List = ({ productList, filterValue }) => {
       return product.category === 2;
     } else if (filterValue === "Ebikes/Elmopeder") {
       return product.category === 1;
+
     } else {
       return product;
     }
@@ -18,8 +20,8 @@ const List = ({ productList, filterValue }) => {
 
   return (
     <div className="bottom row d-flex justify-content-center">
+
       {filterdProductList.map((item: any) => {
-  
         return <Card product={item} key={item.id} />;
       })}
     </div>
