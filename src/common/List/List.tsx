@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./List.scss";
 import Card from "../Card/Card.tsx";
 
@@ -20,7 +20,7 @@ const List = ({ productList, filterValue }) => {
   });
 
   return (
-    <div className="bottom row d-flex justify-content-center">
+    <div className="bottom row d-flex justify-content-center m-0">
       {filterdProductList.map((item) => {
   
         return <Card product={item} key={item.id} />;

@@ -7,36 +7,30 @@
     height: 690px;
     top: 0;
     left: 0;
-    color: rgb(39, 39, 175);
   }
 
-  .wrap{
+  .wrap {
     margin-top: 100px;
     gap: 100px;
-    .btns{
-      button{
+    .btns {
+      button {
         font-size: 20px;
       }
     }
-    .top {
-    .filter-item {
-        
-      .filter-links {
-        color: #1c1b1a;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 20px;
-        letter-spacing: 1px;
-        padding-left: 40px;
+
+    .bottom {
+      .left,
+      .middle,
+      .right {
+        border-radius: 5px;
+        padding: 20px;
+        background-color: rgba(60, 60, 201, 0.122);
       }
-      .filter-links:hover {
-        color: #514e49;
-        transition: 0.5s;
-      }
+      
+    }
+
+    .insta-contant{
+      
     }
   }
-
-  }
-
-  
 }

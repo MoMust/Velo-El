@@ -1,14 +1,25 @@
 // @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 // @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
 
 .app {
-  
-  *{
- font-family: 'Prompt', sans-serif;
- //  outline: 1px solid red;
-}
-   
+  * {
+    font-family: "Prompt", sans-serif;
+    // outline: 1px solid red;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 50px;
+  }
+  h2 {
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 23px;
+  }
+
   .link {
     color: #d5ccc0;
     text-decoration: none;
