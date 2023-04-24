@@ -1,6 +1,6 @@
-import React from 'react'
-import Nav from '../Navbar/Navbar.tsx'
-import './Header.scss'
+import React from "react";
+import Nav from "../../../../common/Navbar/Navbar.tsx";
+import "./Header.scss";
 
 const Header = () => {
   return (
@@ -51,6 +51,6 @@ const Header = () => {
       </div>
     </>
   );
-}
+};
 
-export default Header
+export default Header;

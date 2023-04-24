@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Home.scss";
-import { Link } from "react-router-dom";
-import List from "../../components/List/List.tsx";
+import List from "../../common/List/List.tsx";
+import Content from "./Components/Content/Content.tsx";
+import FilterItem from "../Home/Components/Content/ContentComponents/FilterItem.tsx";
 
 const Home = () => {
   let Data = [
@@ -52,11 +53,6 @@ const Home = () => {
 
   let [filterValue, setFilterValue] = useState("All");
 
-  let onFilterButtonClick = (event) => {
-    let value = event.target.value;
-    setFilterValue(value);
-  };
-
   return (
     <div className="home">
       <div>
@@ -69,43 +65,18 @@ const Home = () => {
         </video>
       </div>
       <div className="wrap d-flex flex-column">
-        <div className="top d-flex justify-content-center">
-          <div className="filter-item">
-            <h1 className="filter-header d-flex justify-content-center">
-              VÅRA PRODUKTER
-            </h1>
-            <hr className="line"></hr>
-            <div className="wrap-btn d-flex justify-content-center">
-              <div className="btns">
-                <button
-                  className="btn"
-                  type="button"
-                  value="All"
-                  onClick={onFilterButtonClick}
-                >
-                  All
-                </button>
-                <button
-                  className="btn"
-                  type="button"
-                  value="Elsparkcyklar"
-                  onClick={onFilterButtonClick}
-                >
-                  Elsparkcykel
-                </button>
-                <button
-                  className="btn"
-                  type="button"
-                  value="Ebikes/Elmopeder"
-                  onClick={onFilterButtonClick}
-                >
-                  Ebikes
-                </button>
-              </div>
-            </div>
-          </div>
+        <div className="filter-wrap d-flex justify-content-center">
+          <FilterItem setFilterValue={setFilterValue} />
         </div>
+
         <List productList={Data} filterValue={filterValue} />
+        <div className="hr d-flex justify-content-center">
+          <hr style={{ width: "60%" }}></hr>
+        </div>
+
+        <div className="content row justify-content-center m-5">
+          <Content />
+        </div>
       </div>
     </div>
   );

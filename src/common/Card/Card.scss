@@ -1,8 +1,8 @@
 .styled-card {
   flex-basis: 25%;
-
+    
   .card-body{
-
+    
         .item-info{
             font-weight: bold;
             .price{
@@ -11,4 +11,7 @@
         }
 
     }
+}
+.styled-card:hover {
+ border: 1px solid rgb(202, 202, 202);
 }
