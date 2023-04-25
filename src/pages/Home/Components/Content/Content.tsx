@@ -133,11 +133,13 @@ const Top = () => {
           <img
             src="assets/images/trustpilot.png"
             style={{ width: "200px" }}
+
             alt=''
           ></img>
         </div>
         <div className="col-3 d-flex justify-content-center">
           <img src="assets/images/klarna.png" style={{ width: "200px", paddingTop: '15px'}} alt=''></img>
+
         </div>
       </div>
     </>

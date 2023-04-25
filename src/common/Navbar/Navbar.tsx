@@ -7,6 +7,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 const Navbar = () => {
 
   return (
+
     <nav className="navbar p-4 nav-bar navbar-expand-lg sticky-top">
       <div className="row container-fluid">
         <div className="logo col-1 me-5">
@@ -14,10 +15,12 @@ const Navbar = () => {
             <img
               className="main-icon"
               src="assets/icons/newLogo.png"
+
               alt=""
             ></img>
           </Link>
         </div>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -194,6 +197,7 @@ const Navbar = () => {
     //   </div>
     // </div>
     //
+
   );
 }
 
