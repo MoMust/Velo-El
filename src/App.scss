@@ -19,6 +19,15 @@
   p {
     font-size: 23px;
   }
+  // TABLET
+  @media screen and (max-width: 991px) {
+    }
+    // MOBILE
+    @media screen and (max-width: 376px) {
+      p {
+        font-size: 15px;
+      }
+    }
 
   .link {
     color: #d5ccc0;

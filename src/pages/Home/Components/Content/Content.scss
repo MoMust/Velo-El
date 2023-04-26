@@ -1,0 +1,28 @@
+.top {
+  .top-header {
+  }
+
+  @media screen and (max-width: 376px) {
+    .top-header {
+      display: flex;
+      justify-content: center;
+
+      h1 {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.center {
+  @media screen and (max-width: 376px) {
+    p {
+      font-size: 12px !important;
+    }
+  }
+}
+
+// @media screen and (max-width: 991px) {
+//   .filter-header {
+//   }
+// }

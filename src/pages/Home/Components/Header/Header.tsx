@@ -8,7 +8,7 @@ const Header = () => {
       <Nav />
       <div className="header-wrapper">
         <div className="header- row d-flex p-5">
-          <div className="left col-5">
+          <div className="left col-lg-6 col-md-12">
             <p className="header-text">
               Velo <span style={{ color: "rgb(60, 60, 201)" }}>Electric</span>
             </p>
@@ -18,7 +18,7 @@ const Header = () => {
               el cyklar i lättvikt och hög prestanda.
             </p>
           </div>
-          <div className="right col-7">
+          <div className="right col-lg-6 ">
             <div className="d-flex flex-column">
               <div>
                 <span className="header-brand">

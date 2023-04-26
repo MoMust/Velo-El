@@ -12,9 +12,23 @@
 .wrapper {
   padding: 10px 30px;
   display: flex;
-  justify-content: space-between;
+  
+  justify-content: center;
   align-items: center;
   gap: 20px;
+
+  @media screen and (max-width: 376px) {
+      .wrapper {
+        padding-top: 10px;
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      .wrapper {
+      display: none;
+      }
+    }
+  
   .item {
     display: flex;
     align-items: center;

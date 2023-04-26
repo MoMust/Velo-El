@@ -7,15 +7,13 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 const Navbar = () => {
 
   return (
-
     <nav className="navbar p-4 nav-bar navbar-expand-lg sticky-top">
       <div className="row container-fluid">
-        <div className="logo col-1 me-5">
+        <div className="logo col-2 me-5">
           <Link className="link " to="/">
             <img
               className="main-icon"
               src="assets/icons/newLogo.png"
-
               alt=""
             ></img>
           </Link>
@@ -33,10 +31,10 @@ const Navbar = () => {
           <span className="navbar-dark navbar-toggler-icon"></span>
         </button>
         <div
-          className="row col-10 collapse wrapper navbar-collapse"
+          className="row col-10  collapse wrapper navbar-collapse"
           id="navbarSupportedContent"
         >
-          <ul className="navbar-nav col-lg-8 col-md-12 left mb-2 mb-lg-0">
+          <ul className="navbar-nav col-lg-8 col-md-12 left ms-3 mb-2 mb-lg-0">
             <li className="nav-item item">
               <Link className="link" to="/">
                 Hem
@@ -123,7 +121,7 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <ul className="navbar-nav col-lg-1 col-md-12 right d-flex justify-content-center mb-2 mb-lg-0">
+          <ul className="navbar-nav col-lg-2 col-md-12 right d-flex justify-content-center mb-2 mb-lg-0">
             <div className="icons">
               <img src="/assets/icons/sweden2.png" alt=""></img>
               <img src="/assets/icons/uk.png" alt=""></img>
@@ -197,7 +195,6 @@ const Navbar = () => {
     //   </div>
     // </div>
     //
-
   );
 }
 

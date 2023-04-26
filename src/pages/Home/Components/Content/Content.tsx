@@ -1,10 +1,9 @@
-import React from 'react'
-import './Content.scss'
+import React from "react";
+import "./Content.scss";
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
 import BatteryChargingFullIcon from "@mui/icons-material/BatteryChargingFull";
 import ContactSupportIcon from "@mui/icons-material/ContactSupport";
 import InstagramIcon from "@mui/icons-material/Instagram";
-
 
 const Top = () => {
   return (
@@ -33,7 +32,7 @@ const Top = () => {
         </p>
       </div>
       <div className="bottom row mt-5 mb-5 justify-content-center">
-        <div className="left col-5 text-center">
+        <div className="left col-lg-5 col-md-12 mb-5 text-center">
           <div className="icon p-3">
             <ElectricBoltIcon style={{ fontSize: "40px" }} />
           </div>
@@ -48,7 +47,7 @@ const Top = () => {
             samhälle.
           </p>
         </div>
-        <div className="middle col-6 text-center align-self-center">
+        <div className="middle col-lg-6 col-md-12 mb-5 text-center align-self-center">
           <div className="icon p-3">
             <BatteryChargingFullIcon style={{ fontSize: "40px" }} />
           </div>
@@ -62,7 +61,7 @@ const Top = () => {
           </p>
         </div>
         <div className="row justify-content-center">
-          <div className="right col-7 text-center mt-5">
+          <div className="right col-lg-7 col-md-12 text-center">
             <div className="icon"></div>
             <div className="icon p-3">
               <ContactSupportIcon style={{ fontSize: "40px" }} />
@@ -87,9 +86,9 @@ const Top = () => {
       </div>
       {/* SPACE */}
       <div className="row mt-5"></div>
-      <div className="insta-contant mt-5">
+      <div className="insta-content mt-5">
         <div className="row top text-center d-flex justify-content-center m-0 p-0">
-          <div className="top-header col-5">
+          <div className="top-header col-lg-12 col-md-12">
             <h1>DELA DIN UPPLEVELSE </h1>
             <hr className="line"></hr>
           </div>
@@ -128,22 +127,24 @@ const Top = () => {
           </div>
         </div>
       </div>
-      <div className="row d-flex justify-content-center mt-5 labels">
-        <div className="col-3 d-flex justify-content-center align-items-center">
+      <div className="ads row d-flex justify-content-center gap-5 mt-5 labels">
+        <div className="col-lg-3 col-md-12 d-flex justify-content-center align-items-center">
           <img
             src="assets/images/trustpilot.png"
-            style={{ width: "200px" }}
-
-            alt=''
+            style={{ width: "150px" }}
+            alt=""
           ></img>
         </div>
-        <div className="col-3 d-flex justify-content-center">
-          <img src="assets/images/klarna.png" style={{ width: "200px", paddingTop: '15px'}} alt=''></img>
-
+        <div className="col-lg-3 col-md-12 d-flex justify-content-center">
+          <img
+            src="assets/images/klarna.png"
+            style={{ width: "150px", paddingTop: "15px" }}
+            alt=""
+          ></img>
         </div>
       </div>
     </>
   );
-}
+};
 
-export default Top
+export default Top;
