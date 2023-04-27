@@ -31,10 +31,10 @@ const Navbar = () => {
           <span className="navbar-dark navbar-toggler-icon"></span>
         </button>
         <div
-          className="row col-10  collapse wrapper navbar-collapse"
+          className="row col-10 collapse wrapper navbar-collapse"
           id="navbarSupportedContent"
         >
-          <ul className="navbar-nav col-lg-8 col-md-12 left ms-3 mb-2 mb-lg-0">
+          <ul className="navbar-nav col-lg-8 col-md-12 left ms-5 mb-2 mb-lg-0">
             <li className="nav-item item">
               <Link className="link" to="/">
                 Hem

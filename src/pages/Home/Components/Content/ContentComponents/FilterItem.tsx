@@ -12,7 +12,7 @@ const FilterItem = ({setFilterValue}) => {
   return (
     <>
       <div className="filter-item">
-        <h1 className="filter-header d-flex justify-content-center">
+        <h1 className="filter-header d-flex text-center justify-content-center">
           VÅRA PRODUKTER
         </h1>
         <hr className="line"></hr>

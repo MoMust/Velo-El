@@ -18,7 +18,7 @@ const Header = () => {
               el cyklar i lättvikt och hög prestanda.
             </p>
           </div>
-          <div className="right col-lg-6 ">
+          <div className="right col-lg-6 pe-sm-0">
             <div className="d-flex flex-column">
               <div>
                 <span className="header-brand">
