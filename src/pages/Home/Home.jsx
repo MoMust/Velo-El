@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./Home.scss";
 import List from "../../common/List/List.tsx";
 import Content from "./Components/Content/Content.tsx";
-import FilterItem from "../Home/Components/Content/ContentComponents/FilterItem.tsx";
+import FilterItem from "./Components/Content/ContentComponents/FilterItem.tsx";
+import Header from "./Components/Header/Header.tsx";
 
 const Home = () => {
   let Data = [
@@ -12,7 +13,7 @@ const Home = () => {
       name: "V10 - EBIKE",
       price: "11.699KR",
       oldPrice: "12.990KR",
-      id: 1,
+      id: "V10",
     },
 
     {
@@ -21,7 +22,7 @@ const Home = () => {
       name: "CT20 - EBIKE",
       price: "27.099KR",
       oldPrice: "30.090KR",
-      id: 2,
+      id: "CT20",
     },
 
     {
@@ -30,7 +31,7 @@ const Home = () => {
       name: "VE02 - ELSPARKCYKEL",
       price: "6.299KR",
       oldPrice: "6.990KR",
-      id: 3,
+      id: "VE02",
     },
 
     {
@@ -39,15 +40,15 @@ const Home = () => {
       name: "VE01 - ELSPARKCYKEL",
       price: "4.499KR",
       oldPrice: "4.990KR",
-      id: 4,
+      id: "VE01",
     },
     {
       image: "assets/images/CT20/CT20-1.webp",
       category: "2",
-      name: "VE01 - ELSPARKCYKEL",
+      name: "VE03 - ELSPARKCYKEL",
       price: "4.499KR",
       oldPrice: "4.990KR",
-      id: 5,
+      id: "VE03",
     },
   ];
 
@@ -55,6 +56,7 @@ const Home = () => {
 
   return (
     <div className="home">
+      <Header />
       <div>
         <video className="videoTag" autoPlay loop muted>
           <source

@@ -1,0 +1,65 @@
+$danger-color: rgb(189, 1, 1);
+$purple-color: rgb(39, 39, 175);
+
+$purple-color-hover: rgb(68, 68, 171);
+
+.cart{
+    overflow: scroll;
+    width:350px;
+    position: absolute;
+    max-height: 680px;
+    background-color: white;
+    border: 1px solid grey;
+    right: 20px;
+    z-index: 999;
+    top: 100px;
+    font-size: 20px;
+    box-shadow: 5px 6px #3c3c3c36;
+
+    .item{
+        img{
+            width:90px;
+            height: 90px;
+            object-fit: cover;
+        }
+
+        .container-{
+            .desc{
+                p{
+                    font-size: 12px;
+                }
+            }
+
+            .delete{
+                .delete-icon{
+                   color: $danger-color;
+                   cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .action{
+        button{
+            background-color: $purple-color;
+        }
+        button:hover{
+            background-color: $purple-color-hover;
+        }
+    }
+
+    .reset-cart{
+        
+        color: $danger-color;
+        ;
+        margin-bottom: 10px;
+        font-size: 15px!important;
+        cursor: pointer;
+    }
+    .reset-cart:hover{
+        background-color: $danger-color;
+        color: white;
+    }
+}
+
+

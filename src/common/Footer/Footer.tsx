@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="item footer-logo text-center">
           <img
             className="footer-icon-1"
-            src="assets/icons/newLogo.png"
+            src="../assets/icons/newLogo.png"
             alt=""
           ></img>
           <p>© VeloElectric 2023. All Rights Reserved.</p>
@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="item">
           <div className="d-flex">
             <p>Se alla våra 2 omdömen på</p>
-            <img src="assets/icons/trustPilot.png" alt=""></img>
+            <img src="../assets/icons/trustPilot.png" alt=""></img>
           </div>
           <div className="links">
             <h4 className="d-flex justify-content-center">LÄNKAR</h4>

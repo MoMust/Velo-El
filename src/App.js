@@ -7,16 +7,15 @@ import Product from "./pages/Product/Product";
 import Service from "./pages/_Service/Service";
 import Contact from "./pages/Contact/Contact";
 import About from "./pages/About/About";
-// import Navbar from "./components/Navbar/Navbar.tsx";
 import Footer from "./common/Footer/Footer.tsx";
-import Header from "./pages/Home/Components/Header/Header.tsx";
+import Navbar from "./common/Navbar/Navbar.tsx";
 
 import "./App.scss";
 
 const Layout = () => {
   return (
     <div className="app">
-      <Header />
+      <Navbar />
       <Outlet className="outlet" />
       <Footer />
     </div>
