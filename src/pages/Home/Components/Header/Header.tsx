@@ -1,11 +1,10 @@
 import React from "react";
-import Nav from "../../../../common/Navbar/Navbar.tsx";
 import "./Header.scss";
 
 const Header = () => {
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <div className="header-wrapper">
         <div className="header- row d-flex p-5">
           <div className="left col-lg-6 col-md-12">
