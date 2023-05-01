@@ -2,13 +2,12 @@ import React from "react";
 import './FilterItem.scss'
 const FilterItem = ({setFilterValue}) => {
 
-
-  
-
   let onFilterButtonClick = (event) => {
     let value = event.target.value;
     setFilterValue(value);
   };
+
+
   return (
     <>
       <div className="filter-item">

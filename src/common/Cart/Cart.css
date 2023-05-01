@@ -1,0 +1,42 @@
+.cart {
+  overflow: scroll;
+  width: 350px;
+  position: absolute;
+  max-height: 680px;
+  background-color: white;
+  border: 1px solid grey;
+  right: 20px;
+  z-index: 999;
+  top: 100px;
+  font-size: 20px;
+  box-shadow: 5px 6px rgba(60, 60, 60, 0.2117647059);
+}
+.cart .item img {
+  width: 90px;
+  height: 90px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cart .item .container- .desc p {
+  font-size: 12px;
+}
+.cart .item .container- .delete .delete-icon {
+  color: rgb(189, 1, 1);
+  cursor: pointer;
+}
+.cart .action button {
+  background-color: rgb(39, 39, 175);
+}
+.cart .action button:hover {
+  background-color: rgb(68, 68, 171);
+}
+.cart .reset-cart {
+  color: rgb(189, 1, 1);
+  margin-bottom: 10px;
+  font-size: 15px !important;
+  cursor: pointer;
+}
+.cart .reset-cart:hover {
+  background-color: rgb(189, 1, 1);
+  color: white;
+}/*# sourceMappingURL=Cart.css.map */

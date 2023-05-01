@@ -4,16 +4,16 @@ import Card from "../Card/Card.tsx";
 
 
 
-const List = ({ productList, filterValue }) => {
+const List = ({ productList, filterValue, loading, error}) => {
 
 
   // console.log(filterValue);
 
   let filterdProductList = productList.filter((product) => {
     if (filterValue === "Elsparkcyklar") {
-      return product.category === "2";
+      return product.attributes.type === "esc";
     } else if (filterValue === "Ebikes/Elmopeder") {
-      return product.category === "1";
+      return product.attributes.type === "ebike";
     } else {
       return product;
     }
@@ -21,7 +21,7 @@ const List = ({ productList, filterValue }) => {
 
   return (
     <div className="bottom row d-flex justify-content-center m-0">
-      {filterdProductList.map((item) => {
+      {error ? "Produkter kunde inte laddas!" : loading ? 'loading' : filterdProductList.map((item) => {
   
         return <Card product={item} key={item.id} />;
       })}
