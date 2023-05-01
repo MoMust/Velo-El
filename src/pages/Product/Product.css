@@ -1,1 +1,43 @@
-/*# sourceMappingURL=Product.css.map */
+.product .left {
+  flex: 1.2;
+}
+.product .left .images {
+  flex: 1.3;
+}
+.product .left .images img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+.product .left .images img:hover {
+  transition: 5ms;
+  border: 2px solid #d5ccc0;
+}
+.product .left .mainImg {
+  flex: 5;
+}
+.product .left .mainImg img {
+  width: 100%;
+  max-width: 800px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product .right {
+  flex: 1;
+}
+.product .right .price span {
+  font-size: 30px;
+}
+.product .right .quantity span {
+  font-size: 20px;
+}
+.product .right .btn {
+  background-color: rgb(39, 39, 175);
+  color: white;
+  font-weight: 600;
+}
+.product .right .desc p {
+  font-size: 20px;
+}/*# sourceMappingURL=Product.css.map */

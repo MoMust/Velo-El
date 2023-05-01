@@ -1,0 +1,6 @@
+@media screen and (max-width: 376px) {
+  .filter-item .filter-header {
+    display: flex;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=FilterItem.css.map */

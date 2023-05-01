@@ -1,15 +1,26 @@
 .home {
   color: black;
-}
-.home .content {
-  height: 1000px;
+  position: relative;
 }
 .home .videoTag {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 690px;
+  height: 590px;
   top: 0;
   left: 0;
-  color: rgb(39, 39, 175);
+}
+.home .wrap {
+  margin-top: 100px;
+  gap: 100px;
+}
+.home .wrap .btns button {
+  font-size: 20px;
+}
+.home .wrap .bottom .left,
+.home .wrap .bottom .middle,
+.home .wrap .bottom .right {
+  border-radius: 5px;
+  padding: 20px;
+  background-color: rgba(60, 60, 201, 0.122);
 }/*# sourceMappingURL=Home.css.map */

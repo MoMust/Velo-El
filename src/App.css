@@ -1,55 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
-.app {
-  font-family: "Prompt", sans-serif;
+.app h1 {
+  font-weight: bold;
+  font-size: 50px;
 }
-.app .header-wrapper {
-  background-color: #111111;
+.app h2 {
+  font-weight: bold;
 }
-.app .header {
-  height: 350px;
-  width: 100%;
-  padding-top: 80px;
-  padding-left: 30px;
+.app p {
+  font-size: 23px;
 }
-.app .header .left {
-  padding: 0;
-}
-.app .header .left .header-text-1 {
-  font-weight: 600;
-  font-size: 70px;
-  color: white;
-}
-.app .header .left h2 {
-  color: white;
-}
-.app .header .left p {
-  color: white;
-}
-.app .header .right {
-  margin-top: 50px;
-  margin-bottom: 0px;
-  padding: 0px;
-}
-.app .header .right .header-brand {
-  font-size: 100px;
-  letter-spacing: 10px;
-  font-weight: 1000;
-  color: white;
-}
-.app .header .right .header-brand .hover {
-  display: none;
-}
-.app .header .right .header-brand:hover {
-  color: #d5ccc0;
-}
-.app .header .right .header-brand:hover .hover {
-  display: contents;
+@media screen and (max-width: 376px) {
+  .app p {
+    font-size: 15px;
+  }
 }
 .app .link {
   color: #d5ccc0;
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 1px;
+  cursor: pointer;
 }
 .app .link:hover {
   color: white;

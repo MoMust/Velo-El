@@ -1,0 +1,15 @@
+@media screen and (max-width: 376px) {
+  .top .top-header {
+    display: flex;
+    justify-content: center;
+  }
+  .top .top-header h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .center p {
+    font-size: 12px !important;
+  }
+}/*# sourceMappingURL=Content.css.map */

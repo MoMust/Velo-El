@@ -1,0 +1,12 @@
+.styled-card {
+  flex-basis: 25%;
+}
+.styled-card .card-body .item-info {
+  font-weight: bold;
+}
+.styled-card .card-body .item-info .price {
+  gap: 10px;
+}
+.styled-card:hover {
+  border: 1px solid rgb(202, 202, 202);
+}/*# sourceMappingURL=Card.css.map */
