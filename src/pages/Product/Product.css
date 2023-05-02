@@ -40,4 +40,17 @@
 }
 .product .right .desc p {
   font-size: 20px;
+}
+.product .spec li {
+  font-size: 20px;
+}
+.product .spec span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.product .spec .spec-ul {
+  list-style: none;
+  gap: 10px;
+  border-radius: 20px;
+  border: 10px solid rgba(85, 85, 168, 0.736);
 }/*# sourceMappingURL=Product.css.map */

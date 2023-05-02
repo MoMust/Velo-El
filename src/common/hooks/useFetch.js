@@ -18,9 +18,11 @@ const useFetch = (url) => {
         setError(true);
       }
 
-      setTimeout(() => {
-        setLoading(false);
-      }, 1000);
+      setLoading(false);
+
+      // setTimeout(() => {
+      //   setLoading(false);
+      // }, 1000);
     };
 
     fetchData();
