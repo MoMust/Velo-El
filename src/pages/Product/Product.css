@@ -1,11 +1,7 @@
-.product .left {
-  flex: 1.2;
-}
 .product .left .images {
   flex: 1.3;
 }
 .product .left .images img {
-  width: 100%;
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -15,6 +11,18 @@
   transition: 5ms;
   border: 2px solid #d5ccc0;
 }
+@media screen and (max-width: 376px) {
+  .product .left .images {
+    flex: 1.3;
+  }
+  .product .left .images img {
+    width: 100%;
+    height: 70px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    cursor: pointer;
+  }
+}
 .product .left .mainImg {
   flex: 5;
 }
@@ -23,9 +31,6 @@
   max-width: 800px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.product .right {
-  flex: 1;
 }
 .product .right .price span {
   font-size: 30px;

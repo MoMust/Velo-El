@@ -1,6 +1,6 @@
 import React from "react";
 import './FilterItem.scss'
-const FilterItem = ({setFilterValue}) => {
+const FilterItem = ({setFilterValue, filterValue}) => {
 
   let onFilterButtonClick = (event) => {
     let value = event.target.value;
@@ -12,18 +12,22 @@ const FilterItem = ({setFilterValue}) => {
     <>
       <div className="filter-item">
         <h1 className="filter-header d-flex text-center justify-content-center">
-          VÅRA PRODUKTER
+          VÅRA PRODUKTER {"\n"}
         </h1>
+        <h3 className="d-flex text-center justify-content-center">
+          {filterValue}
+        </h3>
+
         <hr className="line"></hr>
         <div className="wrap-btn d-flex justify-content-center">
           <div className="btns">
             <button
               className="btn"
               type="button"
-              value="All"
+              value="Alla"
               onClick={onFilterButtonClick}
             >
-              All
+              Alla
             </button>
             <button
               className="btn"
@@ -31,7 +35,7 @@ const FilterItem = ({setFilterValue}) => {
               value="Elsparkcyklar"
               onClick={onFilterButtonClick}
             >
-              Elsparkcykel
+              Elsparkcyklar
             </button>
             <button
               className="btn"
