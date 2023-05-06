@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { makeRequest } from "../../makeRequest";
 
 const useFetch = (url) => {
-  const [data, setData] = useState([]);
+  const [strapiData, setStrapiData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -13,7 +13,7 @@ const useFetch = (url) => {
         setLoading(true);
         const resp = await makeRequest.get(url);
         // console.log('resp:',resp.data.data)
-        setData(resp.data.data);
+        setStrapiData(resp.data.data);
       } catch (error) {
         setError(true);
       }
@@ -28,7 +28,7 @@ const useFetch = (url) => {
     fetchData();
   }, [url]);
 
-  return { data, loading, error };
+  return { strapiData, loading, error };
 };
 
 export default useFetch;

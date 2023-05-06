@@ -10,9 +10,9 @@ import useFetch from "../../common/hooks/useFetch";
 const Home = () => {
 
   
-  const { data, loading, error } = useFetch("/products?populate=*");
+  const { strapiData, loading, error } = useFetch("/products?populate=*");
 
-  let [filterValue, setFilterValue] = useState("All");
+  let [filterValue, setFilterValue] = useState("Alla");
 
   // console.log(data.attributes.img.data.attributes.url);
 
@@ -30,11 +30,11 @@ const Home = () => {
       </div>
       <div className="wrap d-flex flex-column">
         <div className="filter-wrap d-flex justify-content-center">
-          <FilterItem setFilterValue={setFilterValue} />
+          <FilterItem setFilterValue={setFilterValue} filterValue={filterValue}/>
         </div>
 
         <List
-          productList={data}
+          productList={strapiData}
           filterValue={filterValue}
           loading={loading}
           error={error}
