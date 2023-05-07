@@ -3,11 +3,14 @@ import './Navbar.scss'
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Cart from '../Cart/Cart.tsx'
-
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
 
   const [open, setOpen] = useState(false)
+  const products = useSelector((state) => state.cart.products);
+
+
   return (
     <nav className="navbar p-4 nav-bar navbar-expand-lg sticky-top">
       <div className="row container-fluid">
@@ -98,9 +101,9 @@ const Navbar = () => {
             <div className="icons">
               <img src="/assets/icons/sweden2.png" alt=""></img>
               <img src="/assets/icons/uk.png" alt=""></img>
-              <div className="cartIcon" onClick={() =>setOpen(!open)}>
+              <div className="cartIcon" onClick={() => setOpen(!open)}>
                 <ShoppingCartIcon />
-                <span>0</span>
+                <span>{products.length}</span>
               </div>
             </div>
           </ul>

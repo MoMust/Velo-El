@@ -23,7 +23,7 @@ const Card = ({product}) => {
           <div className="price d-flex">
             <p className="card-text" style={{ textDecoration: "line-through" }}>
               {
-              product?.attributes?.price + 0.3 + "KR"}
+              product?.attributes?.price + 3000 + "KR"}
             </p>
             <p className="card-text">{`${product?.attributes.price}KR`}</p>
           </div>
