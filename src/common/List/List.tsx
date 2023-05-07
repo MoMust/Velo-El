@@ -1,7 +1,7 @@
 import React from "react";
 import "./List.scss";
 import Card from "../Card/Card.tsx";
-
+import Loader from "../Loader/Loader.tsx"
 
 
 const List = ({ productList, filterValue, loading, error}) => {
@@ -21,7 +21,7 @@ const List = ({ productList, filterValue, loading, error}) => {
 
   return (
     <div className="bottom row d-flex justify-content-center m-0">
-      {error ? "Produkter kunde inte laddas!" : loading ? 'loading' : filterdProductList.map((item) => {
+      {error ? "Produkter kunde inte laddas!" : loading ? <Loader /> : filterdProductList.map((item) => {
   
         return <Card product={item} key={item.id} />;
       })}
