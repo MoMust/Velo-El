@@ -4,10 +4,12 @@ import "./Product.scss";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import useFetch from "../../common/hooks/useFetch";
 import Spec from './components/spec.tsx'
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartReducer";
 const Product = () => {
   const id = useParams().id;
 
-
+  const dispatch = useDispatch();
   const { strapiData, loading, error } = useFetch(`/products/${id}?populate=*`);
   console.log("product ", strapiData);
 
@@ -61,10 +63,12 @@ const Product = () => {
             </div>
             <div className="price mb-5">
               <div className="d-flex justify-content-center">
-                <span style={{ textDecoration: "line-through" }}>12.990kr</span>
+                <span style={{ textDecoration: "line-through", color: 'grey' }}>
+                  {strapiData?.attributes?.price + 3000} KR
+                </span>
               </div>
               <div className="d-flex justify-content-center">
-                <span>11.699kr</span>
+                <span>{strapiData?.attributes?.price} KR</span>
               </div>
             </div>
             <div className="d-flex gap-5 align-items-center justify-content-center">
@@ -85,7 +89,21 @@ const Product = () => {
                   +
                 </button>
               </div>
-              <button className="btn">
+              <button
+                className="btn"
+                onClick={() =>
+                  dispatch(
+                    addToCart({
+                      id: strapiData.id,
+                      title: strapiData.attributes.title,
+                      desc: strapiData.attributes.desc,
+                      price: strapiData.attributes.price,
+                      img: strapiData.attributes.img.data.attributes.url,
+                      quantity,
+                    })
+                  )
+                }
+              >
                 <AddShoppingCartIcon /> ADD TO CART
               </button>
             </div>

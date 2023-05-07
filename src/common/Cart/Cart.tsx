@@ -1,54 +1,37 @@
 import React from "react";
 import "./Cart.scss";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import {useSelector} from "react-redux"
+import { removeItem, resetCart } from "../../redux/cartReducer";
+import { useDispatch } from "react-redux";
 
 
+  
 
 const Cart = () => {
 
+  const products = useSelector(state=>state.cart.products);
+  const dispatch = useDispatch();
 
+  const totalPrice = () =>{
+    let total = 0;
+    products.forEach((item) => (total += item.quantity * item.price));
 
-  const Data = [
-    {
-      image: "../assets/images/CT20/CT20-1.webp",
-      category: "1",
-      name: "V10 - EBIKE",
-      price: "11.699KR",
-      desc: "Coswheel T20 är mycket populär bland cykelentusiaster. Dess unika ramdesign och höga prestanda gör den till ett attraktivt val för många. Med sin starka motor och långa räckvidd är den perfekt för långa cykelturer, oavsett om du är ute på landsbygden eller i stadstrafiken. Coswheel T20 är utrustad med Shimano-delar, vilket garanterar hög kvalitet och prestanda. Cykeln har också pedaleffekt, en bortlös motor baktill, gasreglage, däckfjädring och mellanfjädring, vilket ger en bekväm och mjuk cykelupplevelse. Dessutom har den en överkomlig prisklass, vilket gör den till ett attraktivt val för alla som är intresserade av att investera i en elektrisk fatbike.",
-      oldPrice: "12.990KR",
-      id: "V10",
-    },
-    {
-      image: "../assets/images/CT20/CT20-1.webp",
-      category: "1",
-      name: "CT20 - EBIKE",
-      desc: "Coswheel T20 är mycket populär bland cykelentusiaster. Dess unika ramdesign och höga prestanda gör den till ett attraktivt val för många. Med sin starka motor och långa räckvidd är den perfekt för långa cykelturer, oavsett om du är ute på landsbygden eller i stadstrafiken. Coswheel T20 är utrustad med Shimano-delar, vilket garanterar hög kvalitet och prestanda. Cykeln har också pedaleffekt, en bortlös motor baktill, gasreglage, däckfjädring och mellanfjädring, vilket ger en bekväm och mjuk cykelupplevelse. Dessutom har den en överkomlig prisklass, vilket gör den till ett attraktivt val för alla som är intresserade av att investera i en elektrisk fatbike.",
-      price: "27.099KR",
-      oldPrice: "30.090KR",
-      id: "CT20",
-    },
-    // {
-    //   image: "../assets/images/CT20/CT20-1.webp",
-    //   category: "1",
-    //   name: "CT20 - EBIKE",
-    //   desc: "Coswheel T20 är mycket populär bland cykelentusiaster. Dess unika ramdesign och höga prestanda gör den till ett attraktivt val för många. Med sin starka motor och långa räckvidd är den perfekt för långa cykelturer, oavsett om du är ute på landsbygden eller i stadstrafiken. Coswheel T20 är utrustad med Shimano-delar, vilket garanterar hög kvalitet och prestanda. Cykeln har också pedaleffekt, en bortlös motor baktill, gasreglage, däckfjädring och mellanfjädring, vilket ger en bekväm och mjuk cykelupplevelse. Dessutom har den en överkomlig prisklass, vilket gör den till ett attraktivt val för alla som är intresserade av att investera i en elektrisk fatbike.",
-    //   price: "27.099KR",
-    //   oldPrice: "30.090KR",
-    //   id: "CT20",
-    // },
-    
-  ];
-
+    return total.toFixed(2);
+  }
 
   return (
     <div className="cart pt-3 ps-3">
       <h5>DIN VARUKORG</h5>
       <hr></hr>
-      {Data?.map((item) => (
+      {products?.map((item) => (
         <div className="item pt-2" key={item.id}>
           <div className="container- d-flex">
             <div className="image">
-              <img src={item.image} alt="velo-electric-bike"></img>
+              <img
+                src={process.env.REACT_APP_UPLOAD_URL + item.img}
+                alt="velo-electric-bike"
+              ></img>
             </div>
             <div>
               <div className="title d-flex">
@@ -62,12 +45,19 @@ const Cart = () => {
                 <div className="row d-flex m-0">
                   <span
                     className="col-5 p-0"
-                    style={{ fontSize: "14px", color: "rgb(39, 39, 175)", fontWeight: 'bold' }}
+                    style={{
+                      fontSize: "14px",
+                      color: "rgb(39, 39, 175)",
+                      fontWeight: "bold",
+                    }}
                   >
-                    1 x {item.price}
+                    {item.quantity} x {item.price}
                   </span>
                   <div className="delete col-6 pe-2 m-0 d-flex justify-content-end">
-                    <DeleteForeverIcon className="delete-icon justify-content-end" />
+                    <DeleteForeverIcon
+                      className="delete-icon justify-content-end"
+                      onClick={() => dispatch(removeItem(item.id))}
+                    />
                   </div>
                 </div>
               </div>
@@ -85,10 +75,10 @@ const Cart = () => {
         </div>
 
         <div className="col-6 ">
-          <span className="d-flex justify-content-end ">0000KR</span>
+          <span className="d-flex justify-content-end ">{totalPrice()}</span>
         </div>
       </div>
-      <button className="reset-cart btn mb-3">Rensa Varukorgen</button>
+      <button className="reset-cart btn mb-3" onClick={()=> dispatch(resetCart())}>Rensa Varukorgen</button>
     </div>
   );
 };
