@@ -1,0 +1,32 @@
+$purple-color: rgb(39, 39, 175);
+
+.form-container {
+  width: 100%;
+
+  form {
+    button {
+      background-color: $purple-color;
+      font-weight: 600;
+    }
+  }
+}
+
+
+@media screen and (max-width: 376px) {
+    .form-container{
+        display: flex;
+        justify-content: center;
+       
+    }
+    }
+
+    @media screen and (max-width: 991px) {
+      .form-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+       form{
+        width: 80%;
+       }
+    }
+    }
