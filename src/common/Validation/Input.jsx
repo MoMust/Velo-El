@@ -12,12 +12,12 @@ const Input = (props) => {
   }
   return (
     <div className="mb-3">
-      <label htmlFor="inputName" className="form-label">
+      <label className="form-label">
         {props.label}
       </label>
       <input
         type={props.type}
-        className="form-control"
+        className="form-control inputName"
         name={props.name}
         value={props.value}
         onChange={(e) =>
@@ -28,7 +28,7 @@ const Input = (props) => {
         onBlur={handleFocus}
         focused={focused.toString()}
       ></input>
-      <span>{props.errorMessage}</span>
+      <span className='errorMessage'>{props.errorMessage}</span>
     </div>
   );
   

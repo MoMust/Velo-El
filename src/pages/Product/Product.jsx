@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import "./Product.scss";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import useFetch from "../../common/hooks/useFetch";
-import Spec from './components/spec.tsx'
+import Spec from './components/spec.jsx'
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartReducer";
 const Product = () => {

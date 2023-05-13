@@ -1,20 +1,18 @@
 import React, { useState } from "react";
 import "./errorMessage.scss";
 const TextInput = (props) => {
+  const [focused, setFocused] = useState(false);
 
-    const [focused, setFocused] = useState(false);
-
-    const handleFocus = (e) => {
-      setFocused(true);
-    };
+  const handleFocus = (e) => {
+    setFocused(true);
+  };
   return (
     <div className="wrap mb-4">
       <label htmlFor="inputMessage" className="form-label">
         {props.label}
       </label>
       <textarea
-        className="form-control"
-        id="inputMessage"
+        className="form-control inputEmail"
         name={props.name}
         value={props.value}
         onChange={(e) =>
@@ -25,13 +23,13 @@ const TextInput = (props) => {
         }
         required={true}
         onBlur={handleFocus}
-        onFocus={()=> setFocused(true)}
+        onFocus={() => setFocused(true)}
         focused={focused.toString()}
         pattern={props.pattern}
       ></textarea>
       <span>{props.errorMessage}</span>
     </div>
   );
-}
+};
 
 export default TextInput;
