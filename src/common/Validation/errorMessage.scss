@@ -1,20 +1,20 @@
-span{
+.errorMessage{
     color:rgb(230, 0, 0);
     font-size: 12px;
     display: none;
 }
 
-input:invalid[focused="true"] ~ span{
+.inputName:invalid[focused="true"] ~ .errorMessage{
     display: block;
 }
 
-input:invalid[focused="true"]{
+.inputName:invalid[focused="true"]{
     border: 1px solid red;
 }
-textarea:invalid[focused="true"] ~ span{
+.inputEmail:invalid[focused="true"] ~ .errorMessage{
     display: block;
 }
 
-textarea:invalid[focused="true"]{
+.inputEmail:invalid[focused="true"]{
     border: 1px solid red;
 }
