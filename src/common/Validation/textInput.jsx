@@ -27,7 +27,7 @@ const TextInput = (props) => {
         focused={focused.toString()}
         pattern={props.pattern}
       ></textarea>
-      <span>{props.errorMessage}</span>
+      <span className="errorMessage">{props.errorMessage}</span>
     </div>
   );
 };
