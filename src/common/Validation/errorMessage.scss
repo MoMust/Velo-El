@@ -1,0 +1,20 @@
+span{
+    color:rgb(230, 0, 0);
+    font-size: 12px;
+    display: none;
+}
+
+input:invalid[focused="true"] ~ span{
+    display: block;
+}
+
+input:invalid[focused="true"]{
+    border: 1px solid red;
+}
+textarea:invalid[focused="true"] ~ span{
+    display: block;
+}
+
+textarea:invalid[focused="true"]{
+    border: 1px solid red;
+}
