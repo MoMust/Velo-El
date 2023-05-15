@@ -5,9 +5,12 @@ const Contact = () => {
   return (
     <>
       <div className="header d-flex justify-content-center">
-        <h1>
-          KONTAKTA VELO <span style={{ color: "rgb(39, 39, 175)" }}>EL</span>
-        </h1>
+        <div>
+          <h1>
+            KONTAKTA VELO <span style={{ color: "rgb(39, 39, 175)" }}>EL</span>
+          </h1>
+          <hr className="line"></hr>
+        </div>
       </div>
 
       <div className="row wrap mb-5">
