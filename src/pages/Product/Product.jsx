@@ -107,69 +107,12 @@ console.log('s',strapiData)
                   )
                 }
               >
-                <AddShoppingCartIcon /> ADD TO CART
+                <AddShoppingCartIcon /> LÄGG TILL
               </button>
             </div>
           </div>
           <div className="mb-5"></div>
           <Spec strapiData={strapiData} />
-          {/* <div className="slider col-12 p-0 m-0">
-            <div
-              id="carouselExampleControls"
-              class="carousel slide "
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner m-50 p-0">
-                <div class="carousel-item active">
-                  <img
-                    src={
-                      process.env.REACT_APP_UPLOAD_URL +
-                      strapiData?.attributes?.specImages?.data[0]?.attributes
-                        ?.url
-                    }
-                    className="d-block w-100"
-                    alt="..."
-                  ></img>
-                </div>
-                <div className="carousel-item">
-                  <img
-                    src={
-                      process.env.REACT_APP_UPLOAD_URL +
-                      strapiData?.attributes?.specImages?.data[1]?.attributes
-                        ?.url
-                    }
-                    className="d-block w-100"
-                    alt="..."
-                  ></img>
-                </div>
-                
-              </div>
-              <button
-                className="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev"
-              >
-                <span
-                  className="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Previous</span>
-              </button>
-              <button
-                className="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleControls"
-                data-bs-slide="next"
-              >
-                <span
-                  className="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div> */}
         </>
       )}
     </div>

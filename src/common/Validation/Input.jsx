@@ -12,7 +12,7 @@ const Input = (props) => {
   }
   return (
     <div className="mb-3">
-      <label className="form-label">
+      <label className="form-label" style={{ fontSize: "20px" }}>
         {props.label}
       </label>
       <input
@@ -28,7 +28,9 @@ const Input = (props) => {
         onBlur={handleFocus}
         focused={focused.toString()}
       ></input>
-      <span className='errorMessage'>{props.errorMessage}</span>
+      <span className="errorMessage" style={{ fontSize: "16px" }}>
+        {props.errorMessage}
+      </span>
     </div>
   );
   

@@ -61,7 +61,11 @@ const Form = () => {
           pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
         />
         <div className="mb-3">
-          <label htmlFor="select" className="form-label">
+          <label
+            htmlFor="select"
+            className="form-label"
+            style={{ fontSize: "20px" }}
+          >
             Välj en produkt
           </label>
           <select
@@ -70,6 +74,7 @@ const Form = () => {
             name="select_product"
             value={toSend.select_product}
             onChange={handleChange}
+            style={{ fontSize: "20px" }}
           >
             <option>Ingen produkt</option>
             <option>T20</option>
@@ -90,7 +95,12 @@ const Form = () => {
           setToSend={setToSend}
           toSend={toSend}
         />
-        <button type="submit" className="btn btn-primary" onClick={onSubmit}>
+        <button
+          type="submit"
+          className="btn btn-primary"
+          style={{ fontSize: "20px" }}
+          onClick={onSubmit}
+        >
           Skicka
         </button>
       </form>
