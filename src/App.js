@@ -9,6 +9,7 @@ import Contact from "./pages/Contact/Contact";
 import About from "./pages/About/About";
 import Footer from "./common/Footer/Footer.tsx";
 import Navbar from "./common/Navbar/Navbar.tsx";
+import Checkout from "./pages/Checkout/Checkout.jsx";
 
 import "./App.scss";
 
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/checkout",
+        element: <Checkout />,
       },
     ],
   },

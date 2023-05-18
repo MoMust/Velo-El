@@ -17,7 +17,7 @@ const Product = () => {
   const [selectedImg, setSelectedImg] = useState("img");
   const [quantity, setQuantity] = useState(1);
   
-
+console.log('s',strapiData)
   return (
     <div className="row product d-flex m-0 pt-3 pb-3 ps-2 pe-2 gap">
       {loading ? (
@@ -64,7 +64,7 @@ const Product = () => {
             <div className="price mb-5">
               <div className="d-flex justify-content-center">
                 <span style={{ textDecoration: "line-through", color: 'grey' }}>
-                  {strapiData?.attributes?.price + 3000} KR
+                  {strapiData?.attributes?.price + 2000} KR
                 </span>
               </div>
               <div className="d-flex justify-content-center">
@@ -100,6 +100,9 @@ const Product = () => {
                       price: strapiData.attributes.price,
                       img: strapiData.attributes.img.data.attributes.url,
                       quantity,
+                      color: strapiData?.attributes?.spec?.color,
+                      material: strapiData?.attributes?.spec?.material,
+                      size: strapiData?.attributes?.spec?.size,
                     })
                   )
                 }

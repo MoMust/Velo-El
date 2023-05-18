@@ -88,7 +88,7 @@ const Top = () => {
       <div className="row mt-5"></div>
       <div className="insta-content mt-5">
         <div className="row top text-center d-flex justify-content-center m-0 p-0">
-          <div className="top-header col-lg-12 col-md-12">
+          <div className="top-header col-lg-6 col-md-12">
             <h1>DELA DIN UPPLEVELSE </h1>
             <hr className="line"></hr>
           </div>

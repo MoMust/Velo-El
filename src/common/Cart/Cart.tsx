@@ -4,7 +4,7 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import {useSelector} from "react-redux"
 import { removeItem, resetCart } from "../../redux/cartReducer";
 import { useDispatch } from "react-redux";
-
+import { Link } from "react-router-dom";
 
   
 
@@ -67,7 +67,7 @@ const Cart = () => {
         </div>
       ))}
       <div className="action d-flex flex-column gap-4">
-        <button className="btn btn-primary m-3">Till Kassan</button>
+        <Link className="btn btn-primary m-3" to="/checkout">TILL VARUKORGEN</Link>
       </div>
       <div className="row price m-0 pe-3">
         <div className="col-6">
@@ -75,7 +75,7 @@ const Cart = () => {
         </div>
 
         <div className="col-6 ">
-          <span className="d-flex justify-content-end ">{totalPrice()}</span>
+          <span className="d-flex justify-content-end ">{totalPrice()} KR</span>
         </div>
       </div>
       <button className="reset-cart btn mb-3" onClick={()=> dispatch(resetCart())}>Rensa Varukorgen</button>
