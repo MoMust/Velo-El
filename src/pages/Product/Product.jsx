@@ -6,6 +6,7 @@ import useFetch from "../../common/hooks/useFetch";
 import Spec from './components/spec.jsx'
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartReducer";
+import Loader from "../../common/Loader/Loader"
 const Product = () => {
   const id = useParams().id;
 
@@ -21,7 +22,7 @@ console.log('s',strapiData)
   return (
     <div className="row product d-flex m-0 pt-3 pb-3 ps-2 pe-2 gap">
       {loading ? (
-        "loading"
+        <Loader/>
       ) : (
         <>
           <div className="left d-flex col-lg-8 col-sm-12 gap-3">

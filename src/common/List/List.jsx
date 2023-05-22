@@ -1,7 +1,7 @@
 import React from "react";
 import "./List.scss";
-import Card from "../Card/Card.tsx";
-import Loader from "../Loader/Loader.tsx"
+import Card from "../Card/Card.jsx";
+import Loader from "../Loader/Loader.jsx"
 
 
 const List = ({ productList, filterValue, loading, error}) => {

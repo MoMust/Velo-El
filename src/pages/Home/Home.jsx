@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./Home.scss";
 // import axios from "axios"
-import List from "../../common/List/List.tsx";
-import Content from "./Components/Content/Content.tsx";
+import List from "../../common/List/List.jsx";
+import Content from "./Components/Content/Content.jsx";
 import FilterItem from "./Components/Content/ContentComponents/FilterItem.tsx";
-import Header from "./Components/Header/Header.tsx";
+import Header from "./Components/Header/Header.jsx";
 import useFetch from "../../common/hooks/useFetch";
 
 const Home = () => {
