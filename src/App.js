@@ -7,8 +7,8 @@ import Product from "./pages/Product/Product";
 import Service from "./pages/_Service/Service";
 import Contact from "./pages/Contact/Contact";
 import About from "./pages/About/About";
-import Footer from "./common/Footer/Footer.tsx";
-import Navbar from "./common/Navbar/Navbar.tsx";
+import Footer from "./common/Footer/Footer.jsx";
+import Navbar from "./common/Navbar/Navbar.jsx";
 import Checkout from "./pages/Checkout/Checkout.jsx";
 
 import "./App.scss";

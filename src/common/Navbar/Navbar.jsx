@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './Navbar.scss'
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import Cart from '../Cart/Cart.tsx'
+import Cart from '../Cart/Cart.jsx'
 import { useSelector } from "react-redux";
 
 const Navbar = () => {
@@ -53,6 +53,7 @@ const Navbar = () => {
                 data-bs-target="#collapseExample"
                 aria-expanded="false"
                 aria-controls="collapseExample"
+                
               >
                 Produkter
               </div>
