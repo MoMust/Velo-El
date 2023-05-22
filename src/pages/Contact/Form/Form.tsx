@@ -12,8 +12,10 @@ const Form = () => {
        select_product: "",
        message: "",
      });
+
+     const [success, setSuccess] = useState('');
  const onSubmit = (e) => {
-   
+   e.preventDefault();
    
     send(
       "service_l4qox2l",
@@ -23,6 +25,8 @@ const Form = () => {
     )
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
+        setSuccess('Ditt meddelande har skickats!')
+        
       })
       .catch((err) => {
         console.log("FAILED...", err);
@@ -36,8 +40,8 @@ const Form = () => {
     // console.log(toSend);
     
   return (
-    <div className="form-container container">
-      <form onSubmit={(e) => e.preventDefault()}>
+    <div className="form-container container p-3">
+      <form onSubmit={onSubmit} id="from">
         <Input
           type="text"
           name="from_name"
@@ -48,6 +52,7 @@ const Form = () => {
           setToSend={setToSend}
           toSend={toSend}
           pattern="^[A-Za-z]{1,20}$"
+          required
         />
         <Input
           type="email"
@@ -59,6 +64,7 @@ const Form = () => {
           setToSend={setToSend}
           toSend={toSend}
           pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+          required
         />
         <div className="mb-3">
           <label
@@ -94,15 +100,21 @@ const Form = () => {
           onChange={handleChange}
           setToSend={setToSend}
           toSend={toSend}
+          required
         />
         <button
           type="submit"
           className="btn btn-primary"
           style={{ fontSize: "20px" }}
-          onClick={onSubmit}
         >
           Skicka
         </button>
+        <p
+          className="pt-3"
+          style={{ fontSize: "20px", color: "rgb(21, 138, 10)" }}
+        >
+          {success}
+        </p>
       </form>
     </div>
   );

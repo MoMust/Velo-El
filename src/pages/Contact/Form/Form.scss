@@ -1,8 +1,9 @@
 $purple-color: rgb(39, 39, 175);
-
+$purple-color-light: rgba(111, 111, 211, 0.158);
 .form-container {
   width: 100%;
-
+  background-color: $purple-color-light;
+  border-radius: 5px;
   form {
     button {
       background-color: $purple-color;
