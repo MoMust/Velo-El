@@ -11,8 +11,20 @@ const Navbar = () => {
   const products = useSelector((state) => state.cart.products);
 
 
+let prevScrollpos = window.pageYOffset;
+
+window.onscroll = function () {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-200px";
+  }
+  prevScrollpos = currentScrollPos;
+};
+
   return (
-    <nav className="navbar p-4 nav-bar navbar-expand-lg sticky-top">
+    <nav className="autohide navbar p-4 nav-bar navbar-expand-lg sticky-top" id="navbar">
       <div className="row container-fluid">
         <div className="logo col-2 me-5">
           <Link className="link " to="/">
@@ -53,7 +65,6 @@ const Navbar = () => {
                 data-bs-target="#collapseExample"
                 aria-expanded="false"
                 aria-controls="collapseExample"
-                
               >
                 Produkter
               </div>

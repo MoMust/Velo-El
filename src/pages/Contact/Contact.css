@@ -1,1 +1,46 @@
-/*# sourceMappingURL=Contact.css.map */
+.header {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.wrap .form-wrap {
+  width: 60%;
+}
+
+@media screen and (max-width: 376px) {
+  .header h1 {
+    font-size: 20px;
+  }
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+  .wrap .left {
+    width: 100%;
+  }
+  .wrap .left .form-wrap {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .header {
+    margin-top: 147px;
+  }
+  .header h1 {
+    font-size: 40px !important;
+  }
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .wrap .left .form-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+}/*# sourceMappingURL=Contact.css.map */

@@ -2,12 +2,16 @@
   //   height: 120px;
   backdrop-filter: blur(7px);
   background-color: #111111;
-
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
   .main-icon {
     width: 100px;
     height: 100px;
   }
+  
 }
+
+
+
 
 .wrapper {
   padding: 10px 30px;

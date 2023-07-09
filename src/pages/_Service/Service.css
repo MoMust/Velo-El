@@ -1,1 +1,21 @@
-/*# sourceMappingURL=Service.css.map */
+@media screen and (max-width: 376px) {
+  .top .top-header {
+    display: flex;
+    justify-content: center;
+  }
+  .top .top-header h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .center p {
+    font-size: 12px !important;
+  }
+}
+
+.bottom .item {
+  border-radius: 5px;
+  padding: 20px;
+  background-color: rgba(60, 60, 201, 0.122);
+}/*# sourceMappingURL=Service.css.map */

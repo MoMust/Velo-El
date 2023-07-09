@@ -1,0 +1,72 @@
+.checkout {
+  width: 100%;
+  min-height: 500px;
+  background-color: rgb(241, 241, 241);
+}
+.checkout .price-board {
+  background-color: rgb(241, 241, 241);
+}
+.checkout .price-board .price-wrap {
+  background-color: white;
+  padding: 30px 20px 20px 20px;
+}
+.checkout .item {
+  background-color: white;
+}
+.checkout .item .checkout-wrapper .product .product-link {
+  color: rgb(39, 39, 175);
+  text-decoration: none;
+}
+.checkout .item .checkout-wrapper .product .product-link:hover {
+  color: rgb(68, 68, 171);
+  text-decoration: none;
+}
+.checkout .item .checkout-wrapper .product .amount-price-mobile {
+  display: none;
+}
+.checkout .item .checkout-wrapper .product .image img {
+  width: 200px;
+  height: 200px;
+}
+.checkout .item .checkout-wrapper .product .desc-action p {
+  font-size: 14px;
+}
+.checkout .item .checkout-wrapper .product .desc-action .spec {
+  list-style: none;
+}
+.checkout .item .checkout-wrapper .product .desc-action .spec li {
+  font-size: 14px;
+}
+.checkout .item .checkout-wrapper .product .desc-action .delete {
+  cursor: pointer;
+  color: grey;
+}
+.checkout .item .checkout-wrapper .product .desc-action .delete .delete-icon {
+  color: rgb(189, 1, 1);
+}
+@media screen and (max-width: 664px) {
+  .checkout .item .checkout-wrapper .product .image img {
+    width: 100px;
+    height: 100px;
+  }
+  .checkout .item .checkout-wrapper .product .desc-action {
+    display: flex;
+    justify-content: center;
+  }
+  .checkout .item .checkout-wrapper .product .desc-action .delete {
+    width: 100%;
+    padding-top: 10px;
+  }
+  .checkout .item .checkout-wrapper .product .desc-action .delete .delete-icon {
+    color: rgb(189, 1, 1);
+  }
+  .checkout .item .checkout-wrapper .product .amount-price {
+    display: none;
+  }
+  .checkout .item .checkout-wrapper .product .amount-price-mobile {
+    display: block;
+  }
+}
+.checkout .item .checkout-wrapper .toPay {
+  border: 1px solid;
+}/*# sourceMappingURL=Checkout.css.map */
