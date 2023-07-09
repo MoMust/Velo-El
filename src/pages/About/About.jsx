@@ -35,7 +35,7 @@ const About = () => {
         <Item
           header={
             <Fragment>
-              VÅR PASSION FÖR <span style={{ color: "green" }}>GRÖNT </span>
+              VÅR PASSION FÖR <span style={{ color: "green" }}>GRÖNT</span>
             </Fragment>
           }
           text="Vi vill aktivt bidra till en grönare miljö. Genom att välja Velo
@@ -45,8 +45,6 @@ const About = () => {
           image="assets/images/00358.jpg"
           className="row item2 first p-4"
         />
-        <div className="mb-5"></div>
-        <div className="mb-5"></div>
         <div className="mb-5"></div>
         <div className="mb-5"></div>
         <div className="mb-5"></div>

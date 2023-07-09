@@ -1,0 +1,26 @@
+.form-container {
+  width: 100%;
+  background-color: rgba(111, 111, 211, 0.158);
+  border-radius: 5px;
+}
+.form-container form button {
+  background-color: rgb(39, 39, 175);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 376px) {
+  .form-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 991px) {
+  .form-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .form-container form {
+    width: 80%;
+  }
+}/*# sourceMappingURL=Form.css.map */

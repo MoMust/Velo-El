@@ -1,0 +1,21 @@
+.errorMessage {
+  color: rgb(230, 0, 0);
+  font-size: 10px;
+  display: none;
+}
+
+.inputName:invalid[focused=true] ~ .errorMessage {
+  display: block;
+}
+
+.inputName:invalid[focused=true] {
+  border: 1px solid red;
+}
+
+.inputEmail:invalid[focused=true] ~ .errorMessage {
+  display: block;
+}
+
+.inputEmail:invalid[focused=true] {
+  border: 1px solid red;
+}/*# sourceMappingURL=errorMessage.css.map */
