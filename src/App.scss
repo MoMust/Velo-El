@@ -53,4 +53,12 @@ $base-color: #c6538c;
     color: white;
     transition: 0.5s;
   }
+  .disabled-link {
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+  pointer-events: none;
+  color: rgb(135, 135, 135);
+}
 }

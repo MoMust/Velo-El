@@ -1,0 +1,23 @@
+$purple-color: rgb(39, 39, 175);
+.styled-card {
+  flex-basis: 25%;
+  .card-img-top {
+    width: 500px;
+    height: 500px;
+  }
+  .card-body {
+    
+    .item-info {
+      font-weight: bold;
+      .price {
+        gap: 10px;
+      }
+    }
+
+    .card-text {
+    }
+  }
+}
+.styled-card:hover {
+  border: 1px solid rgb(202, 202, 202);
+}

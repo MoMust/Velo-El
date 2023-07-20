@@ -24,7 +24,10 @@ window.onscroll = function () {
 };
 
   return (
-    <nav className="autohide navbar p-4 nav-bar navbar-expand-lg sticky-top" id="navbar">
+    <nav
+      className="autohide navbar p-4 nav-bar navbar-expand-lg sticky-top"
+      id="navbar"
+    >
       <div className="row container-fluid">
         <div className="logo col-2 me-5">
           <Link className="link " to="/">
@@ -81,6 +84,11 @@ window.onscroll = function () {
                   </div>
                   <div className="item">
                     <Link className="link" to="/products/2">
+                      Elsparkcyklar
+                    </Link>
+                  </div>
+                  <div className="item">
+                    <Link className=" disabled-link" to="/products/4">
                       Elcyklar
                     </Link>
                   </div>

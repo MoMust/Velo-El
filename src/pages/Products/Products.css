@@ -1,3 +1,6 @@
 .products {
-  height: 500px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
 }/*# sourceMappingURL=Products.css.map */
