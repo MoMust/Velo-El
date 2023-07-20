@@ -12,13 +12,13 @@ const Product = () => {
 
   const dispatch = useDispatch();
   const { strapiData, loading, error } = useFetch(`/products/${id}?populate=*`);
-  console.log("product ", strapiData);
+  // console.log("product ", strapiData);
 
 
   const [selectedImg, setSelectedImg] = useState("img");
   const [quantity, setQuantity] = useState(1);
   
-console.log('s',strapiData)
+// console.log('s',strapiData)
   return (
     <div className="row product d-flex m-0 pt-3 pb-3 ps-2 pe-2 gap">
       {loading ? (

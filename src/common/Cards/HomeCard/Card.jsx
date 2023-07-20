@@ -19,13 +19,15 @@ const Card = ({product}) => {
       </Link>
       <div className="card-body d-flex justify-content-center">
         <div className="item-info text-center">
-          <p className="card-text">{product?.attributes.title}</p>
+          <p className="card-text">{product?.attributes?.title}</p>
           <div className="price d-flex">
-            <p className="card-text" style={{ textDecoration: "line-through" }}>
-              {
-              product?.attributes?.price + 3000 + "KR"}
+            <p
+              className="card-text fw-light"
+              style={{ textDecoration: "line-through" }}
+            >
+              {product?.attributes?.price + 3000 + " SEK"}
             </p>
-            <p className="card-text">{`${product?.attributes.price}KR`}</p>
+            <p className="card-text fw-normal">{`${product?.attributes.price} SEK`}</p>
           </div>
         </div>
       </div>

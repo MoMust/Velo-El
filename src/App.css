@@ -24,4 +24,12 @@
 .app .link:hover {
   color: white;
   transition: 0.5s;
+}
+.app .disabled-link {
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  pointer-events: none;
+  color: rgb(135, 135, 135);
 }/*# sourceMappingURL=App.css.map */

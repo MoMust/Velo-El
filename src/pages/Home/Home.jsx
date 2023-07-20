@@ -15,6 +15,7 @@ const Home = () => {
   let [filterValue, setFilterValue] = useState("Alla");
 
   // console.log(data.attributes.img.data.attributes.url);
+  console.log("Home", strapiData);
 
   return (
     <div className="home">
