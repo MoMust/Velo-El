@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.scss";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -20,29 +21,29 @@ const Header = () => {
           <div className="right col-lg-6 pe-sm-0">
             <div className="d-flex flex-column">
               <div>
-                <span className="header-brand">
+                <Link className="header-brand" to="/products/1">
                   E-BIKES{" "}
                   <span className="hover" style={{ color: "rgb(39, 39, 175)" }}>
                     /
                   </span>
-                </span>
+                </Link>
               </div>
 
               <div>
-                <span className="header-brand">
-                  ElCYKLAR{" "}
-                  <span className="hover" style={{ color: "rgb(39, 39, 175)" }}>
-                    /
-                  </span>
-                </span>
-              </div>
-              <div>
-                <span className="header-brand">
+                <Link className="header-brand" to="/products/2">
                   ELSPARKCYKLAR{" "}
                   <span className="hover" style={{ color: "rgb(39, 39, 175)" }}>
                     /
                   </span>
-                </span>
+                </Link>
+              </div>
+              <div>
+                <Link className="header-brand-disabled disabled-link" to="/products/3">
+                  ELCYKLAR{" "}
+                  <span className="hover" style={{ color: "rgb(39, 39, 175)" }}>
+                    /
+                  </span>
+                </Link>
               </div>
             </div>
           </div>
