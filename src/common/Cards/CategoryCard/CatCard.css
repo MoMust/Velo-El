@@ -2,8 +2,14 @@
   flex-basis: 25%;
 }
 .styled-card .card-img-top {
+  border-radius: 10px;
   width: 500px;
   height: 500px;
+}
+.styled-card .card-img-top:hover {
+  box-shadow: 5px 5px 5px rgba(91, 86, 182, 0.31);
+  border: 1px solid rgba(128, 128, 128, 0.189);
+  transition: 0.4s;
 }
 .styled-card .card-body .item-info {
   font-weight: bold;
@@ -12,5 +18,5 @@
   gap: 10px;
 }
 .styled-card:hover {
-  border: 1px solid rgb(202, 202, 202);
+  border: none;
 }/*# sourceMappingURL=CatCard.css.map */

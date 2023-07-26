@@ -2,10 +2,17 @@ $purple-color: rgb(39, 39, 175);
 .styled-card {
   flex-basis: 25%;
   .card-img-top {
+    border-radius: 10px;
     width: 500px;
     height: 500px;
   }
+  .card-img-top:hover {
+   box-shadow: 5px 5px 5px rgba(91, 86, 182, 0.31);
+   border: 1px solid rgba(128, 128, 128, 0.189);
+   transition: 0.4s;
+  }
   .card-body {
+    
     
     .item-info {
       font-weight: bold;
@@ -19,5 +26,6 @@ $purple-color: rgb(39, 39, 175);
   }
 }
 .styled-card:hover {
-  border: 1px solid rgb(202, 202, 202);
+  border: none;
+  // background-color: rgba(79, 60, 124, 0.05);
 }
