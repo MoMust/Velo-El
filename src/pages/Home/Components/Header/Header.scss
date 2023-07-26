@@ -25,11 +25,11 @@
     }
 
 
-    @media screen and (max-width: 991px) {
-      .header-text {
+    // @media screen and (max-width: 991px) {
+    //   .header-text {
         
-      }
-    }
+    //   }
+    // }
 
     @media screen and (max-width: 376px) {
       .header-text {
@@ -52,7 +52,16 @@
       margin-left: 100px;
       font-weight: 1000;
       color: #d5ccc0;
-
+      text-decoration: none;
+      .hover {
+        display: none;
+      }
+    }
+    .header-brand-disabled {
+      font-size: 50px;
+      margin-left: 100px;
+      font-weight: 1000;
+      text-decoration: none;
       .hover {
         display: none;
       }
@@ -71,10 +80,17 @@
       .header-brand {
         margin-left: 0px;
       }
+      .header-brand-disabled {
+        margin-left: 0px;
+      }
     }
 
     @media screen and (max-width: 376px) {
       .header-brand {
+        margin-left: 0px;
+        font-size: 30px;
+      }
+      .header-brand-disabled {
         margin-left: 0px;
         font-size: 30px;
       }
