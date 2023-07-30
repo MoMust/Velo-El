@@ -1,8 +1,9 @@
 $purple-color: rgb(39, 39, 175);
+// * { border: 1px solid black; }
 .about {
   
   .wrap {
-    width: 100vw;
+    width: 100%;
     .item {
       min-height: 600px;
       border-radius: 5px;
@@ -13,12 +14,14 @@ $purple-color: rgb(39, 39, 175);
       }
       position: relative;
       .img-wrap {
-        flex: 1.3;
+        height: 800px;
         position: absolute;
         right: 0px;
         img {
           border-radius: 10px;
+          object-fit: cover;
           width: 100%;
+          height: 80%;
         }
       }
     }
@@ -31,12 +34,14 @@ $purple-color: rgb(39, 39, 175);
       }
       position: relative;
       .img-wrap {
-        flex: 1.3;
+        height: 800px;
         position: absolute;
         right: 0px;
         img {
+          object-fit: cover;
           border-radius: 10px;
           width: 100%;
+          height: 70%;
         }
       }
     }
@@ -49,15 +54,15 @@ $purple-color: rgb(39, 39, 175);
           }
 
           .img-wrap {
-            flex: 1.3;
             position: relative;
-
+            height: 400px;
             img {
-              top: 0px;
+              top: 20px;
               right: 10%;
               position: absolute;
               border-radius: 50px;
               width: 70%;
+              height: 100%;
             }
           }
         }
@@ -67,15 +72,15 @@ $purple-color: rgb(39, 39, 175);
           }
 
           .img-wrap {
-            flex: 1.3;
             position: relative;
-
+            height: 400px;
             img {
-              top: 0px;
+              top: 20px;
               right: 10%;
               position: absolute;
               border-radius: 50px;
               width: 70%;
+              height: 100%;
             }
           }
         }
