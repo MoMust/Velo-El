@@ -1,15 +1,35 @@
 $danger-color: rgb(189, 1, 1);
 $purple-color: rgb(39, 39, 175);
 
-$purple-color-hover: rgb(68, 68, 171);
+$purple-color-hover: rgb(67, 67, 74);
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(75, 75, 174); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 .cart{
     overflow: scroll;
+     scrollbar-width: thin;
     width:350px;
     position: absolute;
     max-height: 680px;
     background-color: white;
     border: 1px solid grey;
+    border-radius: 7px;
     right: 20px;
     z-index: 999;
     top: 100px;
