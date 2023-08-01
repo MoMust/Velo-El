@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import './Navbar.scss'
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -9,6 +9,22 @@ const Navbar = () => {
 
   const [open, setOpen] = useState(false)
   const products = useSelector((state) => state.cart.products);
+
+  const cartRef = useRef(null);
+
+  useEffect(() => {
+    const handleDocumentClick = (event) => {
+      if (cartRef.current && !cartRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleDocumentClick);
+
+    return () => {
+      document.removeEventListener("click", handleDocumentClick);
+    };
+  }, []);
 
 
 let prevScrollpos = window.pageYOffset;
@@ -121,7 +137,13 @@ window.onscroll = function () {
             <div className="icons">
               <img src="/assets/icons/sweden2.png" alt=""></img>
               <img src="/assets/icons/uk.png" alt=""></img>
-              <div className="cartIcon" onClick={() => setOpen(!open)}>
+              <div
+                className="cartIcon"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setOpen(!open);
+                }}
+              >
                 <ShoppingCartIcon />
                 <span>{products.length}</span>
               </div>
@@ -129,7 +151,7 @@ window.onscroll = function () {
           </ul>
         </div>
       </div>
-      {open && <Cart />}
+      {open && <Cart setOpen={setOpen} open={open} ref={cartRef} />}
     </nav>
   );
 }
