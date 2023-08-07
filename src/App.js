@@ -1,5 +1,11 @@
 import "./App.css";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+  useLocation,
+} from "react-router-dom";
+import { useEffect } from "react";
 
 import Home from "./pages/Home/Home";
 import Products from "./pages/Products/Products";
@@ -13,10 +19,21 @@ import Checkout from "./pages/Checkout/Checkout.jsx";
 
 import "./App.scss";
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 const Layout = () => {
   return (
     <div className="app">
       <Navbar />
+      <ScrollToTop />
       <Outlet className="outlet" />
       <Footer />
     </div>
