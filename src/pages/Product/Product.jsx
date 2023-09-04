@@ -12,7 +12,7 @@ const Product = () => {
 
   const dispatch = useDispatch();
   const { strapiData, loading, error } = useFetch(`/products/${id}?populate=*`);
-  // console.log("product ", strapiData);
+  console.log("product ", strapiData);
 
 
   const [selectedImg, setSelectedImg] = useState("img");
@@ -22,7 +22,7 @@ const Product = () => {
   return (
     <div className="row product d-flex m-0 pt-3 pb-3 ps-2 pe-2 gap">
       {loading ? (
-        <Loader/>
+        <Loader />
       ) : (
         <>
           <div className="left d-flex col-lg-8 col-sm-12 gap-3">
@@ -64,7 +64,7 @@ const Product = () => {
             </div>
             <div className="price mb-5">
               <div className="d-flex justify-content-center">
-                <span style={{ textDecoration: "line-through", color: 'grey' }}>
+                <span style={{ textDecoration: "line-through", color: "grey" }}>
                   {strapiData?.attributes?.price + 2000} KR
                 </span>
               </div>
@@ -112,8 +112,54 @@ const Product = () => {
               </button>
             </div>
           </div>
+          {/* SPEC TABLE */}
           <div className="mb-5"></div>
           <Spec strapiData={strapiData} />
+          {/* SPEC TABLE END*/}
+          {/* SPEC DESCRIPTION */}
+          <div className="spec-desc-container">
+            <div className="row spec-desc gap-5 justify-content-end">
+              <div className="col-5 spec-desc-image">
+                <img
+                  src={
+                    process.env.REACT_APP_UPLOAD_URL +
+                    strapiData?.attributes?.specImages?.data[0]?.attributes?.url
+                  }
+                  alt=""
+                ></img>
+              </div>
+              {/* Create compoenet for the spec description */}
+              <div className="col-6 d-flex flex-column gap-3">
+                <h2 className="spec-desc-title text-center">
+                  {strapiData?.attributes?.specDescTitle1}
+                </h2>
+                <p>{strapiData?.attributes?.specDesc1}</p>
+              </div>
+            </div>
+          </div>
+          <div className="spec-desc-container">
+            <div className="row spec-desc gap-5 justify-content-end">
+              <div className="col-6 d-flex flex-column gap-3">
+                <h2 className="spec-desc-title text-center">
+                  {strapiData?.attributes?.specDescTitle2}
+                </h2>
+                <p>{strapiData?.attributes?.specDesc2}</p>
+              </div>
+              {/* Create compoenet for the spec description */}
+              <div className="col-5 spec-desc-image">
+                <img
+                  src={
+                    process.env.REACT_APP_UPLOAD_URL +
+                    strapiData?.attributes?.specImages?.data[1]?.attributes?.url
+                  }
+                  alt=""
+                ></img>
+              </div>
+              <div className="mb-5"></div>
+              <div className="mb-5"></div>
+            </div>
+          </div>
+          {/* SPEC DESCIPTION END*/}
         </>
       )}
     </div>
