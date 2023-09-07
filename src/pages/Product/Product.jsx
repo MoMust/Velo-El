@@ -12,7 +12,7 @@ const Product = () => {
 
   const dispatch = useDispatch();
   const { strapiData, loading, error } = useFetch(`/products/${id}?populate=*`);
-  console.log("product ", strapiData);
+  // console.log("product ", strapiData);
 
 
   const [selectedImg, setSelectedImg] = useState("img");
@@ -112,7 +112,6 @@ const Product = () => {
               </button>
             </div>
           </div>
-          {/* SPEC TABLE */}
           <div className="mb-5"></div>
           <Spec strapiData={strapiData} />
           {/* SPEC TABLE END*/}
