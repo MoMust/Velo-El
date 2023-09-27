@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import './Navbar.scss'
-import { Link } from 'react-router-dom';
+import "./Navbar.scss";
+import { Link } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import Cart from '../Cart/Cart.jsx'
+import Cart from "../Cart/Cart.jsx";
 import { useSelector } from "react-redux";
 
 const Navbar = () => {
-
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
   const products = useSelector((state) => state.cart.products);
 
   const cartRef = useRef(null);
@@ -26,18 +25,18 @@ const Navbar = () => {
     };
   }, []);
 
+  // Hide navbar on scroll, paused - issue: Navbar hides when dropdown menu (Produkt) is clicked
+  // let prevScrollpos = window.pageYOffset;
 
-let prevScrollpos = window.pageYOffset;
-
-window.onscroll = function () {
-  let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-200px";
-  }
-  prevScrollpos = currentScrollPos;
-};
+  // window.onscroll = function () {
+  //   let currentScrollPos = window.pageYOffset;
+  //   if (prevScrollpos > currentScrollPos) {
+  //     document.getElementById("navbar").style.top = "0";
+  //   } else {
+  //     document.getElementById("navbar").style.top = "-200px";
+  //   }
+  //   prevScrollpos = currentScrollPos;
+  // };
 
   return (
     <nav
@@ -45,7 +44,7 @@ window.onscroll = function () {
       id="navbar"
     >
       <div className="row container-fluid">
-        <div className="logo col-2 me-5">
+        <div className="logo col-1 me-5">
           <Link className="link " to="/">
             <img
               className="main-icon"
@@ -56,7 +55,7 @@ window.onscroll = function () {
         </div>
 
         <button
-          className="navbar-toggler"
+          className="navbar-toggler hamburgerMenu"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -67,10 +66,10 @@ window.onscroll = function () {
           <span className="navbar-dark navbar-toggler-icon"></span>
         </button>
         <div
-          className="row col-10 collapse wrapper navbar-collapse"
+          className="row col-10 collapse main-container navbar-collapse"
           id="navbarSupportedContent"
         >
-          <ul className="navbar-nav col-lg-8 col-md-12 left ms-5 mb-2 mb-lg-0">
+          <ul className="navbar-nav d-flex justify-content-center col-lg-8 col-md-12 left ms-5 mb-2 mb-lg-0">
             <li className="nav-item item">
               <Link className="link" to="/">
                 Hem
@@ -79,7 +78,7 @@ window.onscroll = function () {
 
             <div className="collapse- ">
               <div
-                className="link dropdown-toggle"
+                className="link dropdown-toggle item"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseExample"
                 aria-expanded="false"
@@ -92,25 +91,53 @@ window.onscroll = function () {
                 className="collapse collapse-horizontal"
                 id="collapseExample"
               >
-                <div className="card card-body">
+                <div className="collapsed-links">
                   <div className="item">
                     <Link className="link" to="/products/1">
-                      Ebikes/Elmopeder
+                      <span
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                      >
+                        Ebikes/Elmopeder
+                      </span>
                     </Link>
                   </div>
                   <div className="item">
                     <Link className="link" to="/products/2">
-                      Elsparkcyklar
+                      <span
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                      >
+                        Elsparkcyklar
+                      </span>
                     </Link>
                   </div>
                   <div className="item">
                     <Link className=" disabled-link" to="/products/4">
-                      Elcyklar
+                      <span
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                      >
+                        Elcyklar
+                      </span>
                     </Link>
                   </div>
                   <div className="item">
                     <Link className="link" to="/products/3">
-                      Tillbehör
+                      <span
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                      >
+                        Tillbehör
+                      </span>
                     </Link>
                   </div>
                 </div>
@@ -118,17 +145,38 @@ window.onscroll = function () {
             </div>
             <li className="nav-item item">
               <Link className="link" to="/service">
-                Service
+                <span
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseExample"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                >
+                  Service
+                </span>
               </Link>
             </li>
             <li className="nav-item item item">
               <Link className="link" to="/contact">
-                Kontakta oss
+                <span
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseExample"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                >
+                  Kontakta oss
+                </span>
               </Link>
             </li>
             <li className="nav-item item">
               <Link className="link" to="/about">
+                <span
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseExample"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                >  
                 Om oss
+                </span>
               </Link>
             </li>
           </ul>
@@ -154,6 +202,6 @@ window.onscroll = function () {
       {open && <Cart setOpen={setOpen} open={open} ref={cartRef} />}
     </nav>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

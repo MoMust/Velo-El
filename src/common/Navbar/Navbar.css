@@ -9,63 +9,50 @@
   height: 100px;
 }
 
-.wrapper {
+.main-container {
   padding: 10px 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-@media screen and (max-width: 376px) {
-  .wrapper .wrapper {
-    padding-top: 10px;
-  }
-}
-@media screen and (max-width: 991px) {
-  .wrapper .wrapper {
-    display: none;
-  }
-}
-.wrapper .item {
+.main-container .item {
   display: flex;
   align-items: center;
   font-size: 18px;
 }
-.wrapper .left {
+.main-container .left {
   display: flex;
   align-items: center;
   gap: 25px;
 }
-.wrapper .left .collapse- .collapse .card-body {
-  background-color: #111111;
-}
-.wrapper .left .dropdown .dropdown-menu {
+.main-container .left .dropdown .dropdown-menu {
   border: 1px solid rgb(191, 191, 191);
   background-color: #111111;
 }
-.wrapper .center {
+.main-container .center {
   font-size: 30px;
   letter-spacing: 2px;
   display: flex;
   justify-content: center;
 }
-.wrapper .right {
+.main-container .right {
   display: flex;
   align-items: center;
   gap: 25px;
   margin: 0;
 }
-.wrapper .right .icons {
+.main-container .right .icons {
   display: flex;
   gap: 15px;
   color: #777;
   cursor: pointer;
 }
-.wrapper .right .cartIcon {
+.main-container .right .cartIcon {
   position: relative;
   width: 34px;
 }
-.wrapper .right .cartIcon span {
+.main-container .right .cartIcon span {
   font-size: 12px;
   width: 22px;
   height: 21px;
@@ -78,4 +65,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 376px) {
+  .main-container {
+    padding-top: 10px;
+    height: 80vh;
+  }
+  .main-container .item {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .main-container {
+    display: none;
+    height: 70vh;
+  }
+  .main-container .item {
+    font-size: 35px;
+  }
 }/*# sourceMappingURL=Navbar.css.map */
