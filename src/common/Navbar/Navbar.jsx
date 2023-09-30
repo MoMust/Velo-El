@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Cart from "../Cart/Cart.jsx";
 import { useSelector } from "react-redux";
+import { current } from "@reduxjs/toolkit";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -20,7 +21,36 @@ const Navbar = () => {
 
     document.addEventListener("click", handleDocumentClick);
 
+    let prevWidth = window.innerWidth;
+    let element = "";
+
+    const navbarIdChange = () => {ö
+      let currentWidth = window.innerWidth;
+
+      for (const node of document.getElementsByClassName("main-container")) {
+        element = node.id;
+      }
+      // console.log(element)
+
+      if (currentWidth >= 991 && element === "navbarSupportedContent") {
+        console.log('id Changed', currentWidth)
+        document.getElementById("navbarSupportedContent").id =
+          "navbarSupportedContentNone";
+      } else if (
+        currentWidth <= 991 &&
+        element === "navbarSupportedContentNone"
+      ) {
+        document.getElementById("navbarSupportedContentNone").id =
+          "navbarSupportedContent";
+      }
+      prevWidth = currentWidth;
+    };
+
+
+
     return () => {
+      navbarIdChange();
+      window.onresize = navbarIdChange;
       document.removeEventListener("click", handleDocumentClick);
     };
   }, []);
@@ -72,7 +102,14 @@ const Navbar = () => {
           <ul className="navbar-nav d-flex justify-content-center col-lg-8 col-md-12 left ms-5 mb-2 mb-lg-0">
             <li className="nav-item item">
               <Link className="link" to="/">
-                Hem
+                <span
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseExample"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                >
+                  Home
+                </span>
               </Link>
             </li>
 
@@ -174,8 +211,8 @@ const Navbar = () => {
                   data-bs-target="#collapseExample"
                   data-bs-toggle="collapse"
                   data-bs-target="#navbarSupportedContent"
-                >  
-                Om oss
+                >
+                  Om oss
                 </span>
               </Link>
             </li>
