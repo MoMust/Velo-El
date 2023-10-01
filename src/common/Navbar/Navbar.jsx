@@ -24,7 +24,7 @@ const Navbar = () => {
     let prevWidth = window.innerWidth;
     let element = "";
 
-    const navbarIdChange = () => {ö
+    const navbarIdChange = () => {
       let currentWidth = window.innerWidth;
 
       for (const node of document.getElementsByClassName("main-container")) {
