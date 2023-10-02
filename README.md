@@ -1,4 +1,4 @@
-OBS: Server is in a seperate repo called Velo-el Backend. Please fork it to start the backend for this project
+# OBS: Server is in a seperate repo called Velo-el Backend. Please fork it to start the backend for this project
 
 # Getting Started with Create React App
 
